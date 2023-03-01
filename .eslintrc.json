@@ -1,0 +1,60 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:react/jsx-runtime"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "tsx": true,
+      "ts": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["simple-import-sort", "prettier", "react", "react-hooks", "@typescript-eslint"],
+  "root": true,
+  "rules": {
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "import/prefer-default-export": 0,
+    "no-param-reassign": 0,
+    "import/extensions": 0,
+    "no-unused-vars": 0,
+    "no-undef": 0,
+    "react/no-unused-prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "no-restricted-globals": "off",
+    "prefer-template": "off",
+    "react/tsx-filename-extension": [0, { "allow": "as-needed" }],
+    "arrow-body-style": 0,
+    "react/no-array-index-key": 0,
+    "import/no-unresolved": "off",
+    "max-classes-per-file": 0,
+    "react/forbid-prop-types": "off",
+    "consistent-return": "off",
+    "default-param-last": "off",
+    "react/require-default-props": 0
+  }
+}

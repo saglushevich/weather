@@ -1,0 +1,4 @@
+export const CALENDAR_LINK = process.env.REACT_APP_CALENDAR_LINK;
+export const OPEN_WEATHER_LINK = process.env.REACT_APP_OPEN_WEATHER_LINK;
+export const VISUAL_CROSSING_LINK = process.env.REACT_APP_VISUAL_CROSSING_LINK;
+export const SUPABASE_LINK = process.env.REACT_APP_SUPABASE_LINK;

@@ -1,0 +1,5 @@
+export const OPEN_WEATHER_KEY = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
+export const VISUAL_CROSSING_KEY =
+  process.env.REACT_APP_VISUAL_CROSSING_API_KEY;
+export const GOOGLE_MAPS_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+export const SUPABASE_KEY = process.env.REACT_APP_SUPABASE_API_KEY;
