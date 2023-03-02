@@ -8,6 +8,11 @@ export const CalendarWrapper = styled.div`
     padding: ${({ theme }) => theme.gaps.m};
     padding-bottom: 0px;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.gaps.l};
+    padding-bottom: 0px;
+  }
 `;
 
 export const Time = styled.div`
@@ -17,7 +22,6 @@ export const Time = styled.div`
   text-shadow: #000 0 0 2px;
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    display: inline-block;
     font-size: ${({ theme }) => theme.fontSizes.xl};
   }
 `;
@@ -29,8 +33,11 @@ export const Date = styled.div`
   text-shadow: #000 0 0 2px;
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    display: inline-block;
     font-size: ${({ theme }) => theme.fontSizes.m};
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.xl};
   }
 `;
 

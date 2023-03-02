@@ -10,8 +10,6 @@ export const Container = styled.div`
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     display: block;
-    @media (max-height: 790px) {
-      height: auto;
-    }
+    height: auto;
   }
 `;

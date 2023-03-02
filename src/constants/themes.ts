@@ -22,6 +22,7 @@ export const THEMES = {
     l: "24px",
   },
   media: {
-    mobile: "400px",
+    mobile: "415px",
+    tablet: "915px",
   },
 };
