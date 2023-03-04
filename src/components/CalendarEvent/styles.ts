@@ -12,6 +12,10 @@ export const EventWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.m};
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    padding: ${({ theme }) => `${theme.gaps.s} ${theme.gaps.m}`};
+  }
 `;
 
 export const EventText = styled.div`
@@ -21,5 +25,9 @@ export const EventText = styled.div`
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.m};
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    font-size: ${({ theme }) => theme.fontSizes.s};
   }
 `;

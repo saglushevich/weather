@@ -15,6 +15,11 @@ export const SearchInput = styled.input`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   color: #fff;
 
+  @media (max-width: ${({ theme }) => theme.media.tabletSmall}) {
+    width: 100%;
+    height: 50px;
+  }
+
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     width: 100%;
     height: 50px;

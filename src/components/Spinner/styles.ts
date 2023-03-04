@@ -17,7 +17,5 @@ export const SpinnerWrapper = styled.div`
 export const SpinnerImg = styled.div`
   height: 400px;
   width: 400px;
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-  }
   background: url(${spinner}) center center/ cover no-repeat;
 `;

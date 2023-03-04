@@ -26,7 +26,7 @@ export const toastSignOutData = {
   bgcolor: "#007868",
   color: "#FFF",
   animation: "slide",
-  delay: 3000,
+  delay: 2000,
   position: "top-right",
   padding: 25,
 };

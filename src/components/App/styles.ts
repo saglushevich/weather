@@ -8,8 +8,13 @@ export const Container = styled.div`
   height: 100vh;
   background: url(${useBackgroundImage}) center center/ cover no-repeat;
 
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+  @media (max-width: ${({ theme }) => theme.media.tabletSmall}) {
     display: block;
     height: auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    display: block;
+    min-height: 100vh;
   }
 `;

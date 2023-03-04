@@ -10,12 +10,26 @@ export const WeatherWrapper = styled.div`
   background: rgba(255, 255, 255, 0.2);
   border-radius: ${({ theme }) => theme.borderSizes.m};
   cursor: pointer;
+
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    width: 256px;
+  }
 `;
 
 export const WeatherImage = styled.img`
   width: 150px;
   height: 100px;
   object-fit: cover;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    width: 110px;
+    height: 90px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    width: 100px;
+    height: 80px;
+  }
 `;
 
 export const WeatherInfo = styled.div`

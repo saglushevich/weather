@@ -4,13 +4,18 @@ export const CalendarWrapper = styled.div`
   padding-top: ${({ theme }) => theme.gaps.xl};
   padding-left: ${({ theme }) => theme.gaps["2xl"]};
 
+  @media (max-width: ${({ theme }) => theme.media.tablet}) {
+    padding: ${({ theme }) => theme.gaps.l};
+    padding-bottom: 0px;
+  }
+
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     padding: ${({ theme }) => theme.gaps.m};
     padding-bottom: 0px;
   }
 
-  @media (max-width: ${({ theme }) => theme.media.tablet}) {
-    padding: ${({ theme }) => theme.gaps.l};
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    padding: ${({ theme }) => theme.gaps.s};
     padding-bottom: 0px;
   }
 `;
@@ -32,12 +37,12 @@ export const Date = styled.div`
   color: #ffffff;
   text-shadow: #000 0 0 2px;
 
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    font-size: ${({ theme }) => theme.fontSizes.m};
-  }
-
   @media (max-width: ${({ theme }) => theme.media.tablet}) {
     font-size: ${({ theme }) => theme.fontSizes.xl};
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.m};
   }
 `;
 
@@ -59,7 +64,7 @@ export const CalendarButton = styled.button`
 `;
 
 export const CalendarEvents = styled.ul`
-  height: 315px;
+  max-height: 315px;
   overflow: scroll;
   margin-top: ${({ theme }) => theme.gaps.m};
 `;

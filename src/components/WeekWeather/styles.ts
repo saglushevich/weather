@@ -7,8 +7,14 @@ export const WeekWeatherContainer = styled.div`
   background: rgba(5, 66, 107, 0.7);
   padding: ${({ theme }) => theme.gaps.m};
 
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+  @media (max-width: ${({ theme }) => theme.media.tabletSmall}) {
     width: 100%;
+    height: auto;
+    margin-top: ${({ theme }) => theme.gaps.m};
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    height: 900px;
     margin-top: ${({ theme }) => theme.gaps.m};
     height: auto;
   }
@@ -21,4 +27,9 @@ export const WeekWeatherBlock = styled.div`
   grid-template-rows: repeat(2, 165px);
   gap: ${({ theme }) => theme.gaps.s};
   margin-top: ${({ theme }) => theme.gaps.m};
+
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    grid-template-columns: repeat(2, 120px);
+    gap: ${({ theme }) => theme.gaps.s};
+  }
 `;

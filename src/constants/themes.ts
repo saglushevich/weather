@@ -22,7 +22,9 @@ export const THEMES = {
     l: "24px",
   },
   media: {
+    mobileSmall: "340px",
     mobile: "415px",
+    tabletSmall: "750px",
     tablet: "915px",
   },
 };

@@ -10,6 +10,10 @@ export const WeatherCardWrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderSizes.m};
   cursor: pointer;
   user-select: none;
+
+  @media (max-width: ${({ theme }) => theme.media.mobileSmall}) {
+    width: 120px;
+  }
 `;
 
 export const WeatherCardText = styled.div`
