@@ -20,14 +20,25 @@ export const toastErrorData = {
   padding: 25,
 };
 
+export const toastSignInData = {
+  title: "Login successfully",
+  type: "success",
+  bgcolor: "#007868",
+  color: "#FFF",
+  animation: "slide",
+  delay: 2500,
+  position: "top-left",
+  padding: 25,
+};
+
 export const toastSignOutData = {
   title: "Sign out completed successfully",
   type: "success",
   bgcolor: "#007868",
   color: "#FFF",
   animation: "slide",
-  delay: 2000,
-  position: "top-right",
+  delay: 2500,
+  position: "top-left",
   padding: 25,
 };
 

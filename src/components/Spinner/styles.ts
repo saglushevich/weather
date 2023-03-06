@@ -11,7 +11,7 @@ export const SpinnerWrapper = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.white};
 `;
 
 export const SpinnerImg = styled.div`

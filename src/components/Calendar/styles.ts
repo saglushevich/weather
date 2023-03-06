@@ -23,7 +23,7 @@ export const CalendarWrapper = styled.div`
 export const Time = styled.div`
   font-weight: 700;
   font-size: ${({ theme }) => theme.fontSizes["3xl"]};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   text-shadow: #000 0 0 2px;
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
@@ -34,7 +34,7 @@ export const Time = styled.div`
 export const Date = styled.div`
   font-weight: 400;
   font-size: ${({ theme }) => theme.fontSizes["2xl"]};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   text-shadow: #000 0 0 2px;
 
   @media (max-width: ${({ theme }) => theme.media.tablet}) {
@@ -47,13 +47,13 @@ export const Date = styled.div`
 `;
 
 export const CalendarButton = styled.button`
-  background: rgb(5, 66, 107);
+  background: ${({ theme }) => theme.colors.blue};
   padding: ${({ theme }) => `${theme.gaps.m} ${theme.gaps.xl}`};
   border-radius: ${({ theme }) => theme.borderSizes.m};
   border: none;
   font-weight: 400;
   font-size: ${({ theme }) => theme.fontSizes.l};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   margin-top: ${({ theme }) => theme.gaps.m};
 
@@ -71,8 +71,9 @@ export const CalendarEvents = styled.ul`
 
 export const CalendarText = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.m};
-  font-weight: 700px;
-  color: rgb(5, 66, 107);
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.white};
+  text-shadow: #000 0 0 2px;
   margin-top: ${({ theme }) => theme.gaps.m};
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {

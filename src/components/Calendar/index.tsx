@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSession } from "@supabase/auth-helpers-react";
+import { addToast } from "modsen-toasts-lib";
 
 import CalendarEvent from "@components/CalendarEvent";
 import { useTime, useGoogleAuth } from "@hooks";
@@ -7,6 +8,7 @@ import { fetchCalendar } from "@store/actions/actions";
 import { useCustomSelector, useCustomDispatch } from "@store";
 import { ICalendar } from "@interfaces";
 import { calendarSelector } from "@store/selectors";
+import { toastSignInData } from "@constants";
 
 import {
   CalendarWrapper,
@@ -26,6 +28,9 @@ function CalendarList() {
   useEffect(() => {
     if (session?.provider_token) {
       dispatch(fetchCalendar(`${session?.provider_token}`));
+      if (!sessionStorage.getItem("user")) {
+        addToast(toastSignInData)();
+      }
     }
   }, [dispatch, session?.provider_token]);
 
@@ -38,6 +43,20 @@ function CalendarList() {
       <CalendarText>Login to show your calendar</CalendarText>
     );
 
+  const calendarEvents = events.map((item: ICalendar) => {
+    const { id, start, summary, organizer } = item;
+    const { dateTime } = start;
+    const { email } = organizer;
+    return (
+      <CalendarEvent
+        key={id}
+        time={dateTime.slice(11, 16)}
+        summary={summary}
+        organizer={email}
+      />
+    );
+  });
+
   return (
     <CalendarWrapper>
       <Time>{time}</Time>
@@ -48,16 +67,7 @@ function CalendarList() {
         <CalendarButton onClick={signIn}>Show calendar</CalendarButton>
       )}
       {events.length ? (
-        <CalendarEvents>
-          {events.map((item: ICalendar) => (
-            <CalendarEvent
-              key={item.id}
-              time={item.start.dateTime.slice(11, 16)}
-              summary={item.summary}
-              organizer={item.organizer.email}
-            />
-          ))}
-        </CalendarEvents>
+        <CalendarEvents>{calendarEvents}</CalendarEvents>
       ) : (
         message
       )}

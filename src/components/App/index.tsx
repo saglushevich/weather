@@ -25,7 +25,7 @@ function App() {
         <GlobalStyles />
         <ToastContainer />
       </Container>
-      {loading ? <Spinner /> : null}
+      {loading && <Spinner />}
     </ThemeProvider>
   );
 }

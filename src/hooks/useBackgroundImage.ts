@@ -1,21 +1,21 @@
 import { useCustomSelector } from "@store";
 import { currentWeatherSelector } from "@store/selectors";
-import rain from "@assets/bg/rain.jpeg";
-import cloudy from "@assets/bg/cloudy.jpeg";
-import mist from "@assets/bg/mist.jpeg";
-import snow from "@assets/bg/snow.jpeg";
-import sunny from "@assets/bg/sunny.jpeg";
-import thunderstorm from "@assets/bg/thunderstorm.jpeg";
+import rain from "@assets/bg/rain.webp";
+import cloudy from "@assets/bg/cloudy.webp";
+import mist from "@assets/bg/mist.webp";
+import snow from "@assets/bg/snow.webp";
+import sunny from "@assets/bg/sunny.webp";
+import thunderstorm from "@assets/bg/thunderstorm.webp";
 
 export function useBackgroundImage() {
-  const currentWeather = useCustomSelector(currentWeatherSelector);
-
+  const { weather } = useCustomSelector(currentWeatherSelector);
+  const { id } = weather[0];
   let weatherId = 1;
 
-  if (+currentWeather.weather[0].id === 800) {
+  if (+id === 800) {
     weatherId = 1;
   } else {
-    weatherId = +currentWeather.weather[0].id.toString().slice(0, 1);
+    weatherId = +id.toString().slice(0, 1);
   }
 
   switch (weatherId) {

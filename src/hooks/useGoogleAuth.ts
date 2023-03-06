@@ -21,7 +21,9 @@ export function useGoogleAuth() {
   const signOut = (): void => {
     supabase.auth.signOut();
     dispatch(setCalendar([]));
+
     addToast(toastSignOutData)();
+    sessionStorage.removeItem("user");
   };
 
   return [signIn, signOut];

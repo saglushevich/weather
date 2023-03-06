@@ -16,5 +16,6 @@ export const getCalendar = async (
     }
   );
 
+  sessionStorage.setItem("user", result.data.summary);
   return result.data.items;
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import WeatherCard from "@components/WeatherCard";
 import CurrentWeather from "@components/CurrentWeather";
 import SearchPanel from "@components/SearchPanel";
@@ -11,20 +12,17 @@ import { WeekWeatherContainer, WeekWeatherBlock } from "./styles";
 function WeekWeather() {
   const weather = useCustomSelector(weatherSelector);
 
+  const weatherCards = weather.map((item: ITransformedOpenWeatherDaily) => {
+    const { dt, temp, weather } = item;
+
+    return <WeatherCard key={dt} temp={temp} icon={weather[0].icon} day={dt} />;
+  });
+
   return (
     <WeekWeatherContainer>
       <SearchPanel />
       <CurrentWeather />
-      <WeekWeatherBlock>
-        {weather.map((item: ITransformedOpenWeatherDaily) => (
-          <WeatherCard
-            key={item.dt}
-            temp={item.temp}
-            icon={item.weather[0].icon}
-            day={item.dt}
-          />
-        ))}
-      </WeekWeatherBlock>
+      <WeekWeatherBlock>{weatherCards}</WeekWeatherBlock>
       <WeatherSwitcher />
     </WeekWeatherContainer>
   );

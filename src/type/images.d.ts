@@ -1,5 +1,5 @@
-declare module "*.jpeg";
 declare module "*.svg";
+declare module "*.webp";
 declare module "modsen-toasts-lib";
 
 interface RefObject<T> {

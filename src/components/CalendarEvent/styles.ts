@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const EventWrapper = styled.div`
-  background: rgba(5, 66, 107, 0.7);
+  background: ${({ theme }) => theme.colors.translucentBlue};
   padding: ${({ theme }) => `${theme.gaps.m} ${theme.gaps.l}`};
   border-radius: ${({ theme }) => theme.borderSizes.m};
   z-index: 50;
@@ -21,7 +21,7 @@ export const EventWrapper = styled.div`
 export const EventText = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.m};
   font-weight: 400px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.m};

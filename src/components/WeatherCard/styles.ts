@@ -6,7 +6,7 @@ export const WeatherCardWrapper = styled.div`
   justify-content: center;
   width: 100px;
   height: 165px;
-  background: rgba(255, 255, 255, 0.2);
+  background: ${({ theme }) => theme.colors.translucentWhite};
   border-radius: ${({ theme }) => theme.borderSizes.m};
   cursor: pointer;
   user-select: none;
@@ -20,7 +20,7 @@ export const WeatherCardText = styled.div`
   font-weight: 400;
   font-size: ${({ theme }) => theme.fontSizes.l};
   text-align: center;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const WeatherCardImg = styled.img`

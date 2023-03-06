@@ -4,7 +4,7 @@ export const WeekWeatherContainer = styled.div`
   width: 410px;
   height: 100%;
   margin-left: auto;
-  background: rgba(5, 66, 107, 0.7);
+  background: ${({ theme }) => theme.colors.translucentBlue};
   padding: ${({ theme }) => theme.gaps.m};
 
   @media (max-width: ${({ theme }) => theme.media.tabletSmall}) {

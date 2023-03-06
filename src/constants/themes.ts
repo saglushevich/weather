@@ -27,4 +27,10 @@ export const THEMES = {
     tabletSmall: "750px",
     tablet: "915px",
   },
+  colors: {
+    white: "#ffffff",
+    translucentWhite: "#ffffff33",
+    blue: "#05426b",
+    translucentBlue: "#05426bb3",
+  },
 };
