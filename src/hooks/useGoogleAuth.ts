@@ -23,7 +23,7 @@ export function useGoogleAuth() {
     dispatch(setCalendar([]));
 
     addToast(toastSignOutData)();
-    sessionStorage.removeItem("user");
+    localStorage.removeItem("user");
   };
 
   return [signIn, signOut];

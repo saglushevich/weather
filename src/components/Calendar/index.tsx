@@ -28,7 +28,7 @@ function CalendarList() {
   useEffect(() => {
     if (session?.provider_token) {
       dispatch(fetchCalendar(`${session?.provider_token}`));
-      if (!sessionStorage.getItem("user")) {
+      if (!localStorage.getItem("user")) {
         addToast(toastSignInData)();
       }
     }
